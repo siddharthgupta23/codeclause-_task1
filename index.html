@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Full View and Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="search">
+        <input type="text" id="searchQuery" placeholder="Search for images...">
+        <button onclick="fetchImages()">Search</button>
+    </div>
+    <div class="filters">
+        <select id="categoryFilter" onchange="filterImages()">
+            <option value="all">All Categories</option>
+            <option value="nature">Nature</option>
+            <option value="animals">Animals</option>
+            <option value="architecture">Architecture</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+            <option value="food">Food</option>
+            <option value="sports">Sports</option>
+            <option value="travel">Travel</option>
+            <option value="art">Art</option>
+            <option value="people">People</option>
+            <option value="health">Health</option>
+            <option value="business">Business</option>
+            <option value="education">Education</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="cars">Cars</option>
+            <option value="pets">Pets</option>
+            <option value="weather">Weather</option>
+            <option value="space">Space</option>
+            <option value="music">Music</option>
+            <option value="gardening">Gardening</option>
+            <option value="interior">Interior</option>
+            <option value="fitness">Fitness</option>
+            <option value="outdoors">Outdoors</option>
+            <option value="nightlife">Nightlife</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="holidays">Holidays</option>
+            <option value="religion">Religion</option>
+            <option value="politics">Politics</option>
+            <option value="wildlife">Wildlife</option>
+            <option value="abstract">Abstract</option>
+            <option value="landscapes">Landscapes</option>
+            <option value="flowers">Flowers</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="industrial">Industrial</option>
+            <option value="culinary">Culinary</option>
+        
+            
+        </select>
+        <select id="tagFilter" onchange="filterImages()">
+            <option value="all">All Tags</option>
+            <option value="forest">Forest</option>
+            <option value="sea">Sea</option>
+            <option value="wildlife">Wildlife</option>
+            <option value="city">City</option>
+            <option value="mountains">Mountains</option>
+            <option value="beach">Beach</option>
+            <option value="desert">Desert</option>
+            <option value="river">River</option>
+            <option value="flower">Flower</option>
+            <option value="IT">Information-Technology</option>
+        </select>
+    </div>
+    <div class="gallery" id="gallery">
+    
+    </div>
+
+    <div class="full-view" id="fullView">
+        <span class="close-btn" onclick="closeFullView()">&times;</span>
+        <img id="fullImage" src="" alt="Full Size Image">
+        <button id="downloadBtn" onclick="downloadFullImage()">Download</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
